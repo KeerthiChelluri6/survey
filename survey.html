@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Soft blue background */
+            padding: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #cfd8dc; /* Light grey border */
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff; /* Blue color for the form title */
+        }
+
+        label {
+            color: #455a64; /* Dark grey color for labels */
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #b0bec5; /* Light grey border for inputs */
+            box-sizing: border-box;
+            background-color: #eceff1; /* Very light grey background for inputs */
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff; /* Blue background for submit button */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .button[type="reset"] {
+            background-color: #f44336; /* Red background for cancel button */
+        }
+
+        .button[type="reset"]:hover {
+            background-color: #d32f2f; /* Darker red on hover */
+        }
+
+        fieldset {
+            border: 2px solid #b0bec5; /* Light grey border for fieldset */
+            padding: 10px;
+        }
+
+        legend {
+            color: #007bff; /* Blue color for legends */
+            font-weight: bold;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .checkbox-group label, .radio-group label {
+            flex-basis: calc(50% - 10px);
+            color: #455a64; /* Dark grey color for checkbox and radio labels */
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="C:/Users/Dell/OneDrive/Desktop/thankyou.html" method="post">
+        <h2>Student Survey Form</h2>
+        
+        <!-- Required Text Fields -->
+        <p><label for="firstName">First Name:</label><input type="text" id="firstName" name="firstName" required></p>
+        <p><label for="lastName">Last Name:</label><input type="text" id="lastName" name="lastName" required></p>
+        <p><label for="streetAddress">Street Address:</label><input type="text" id="streetAddress" name="streetAddress" required></p>
+        <p><label for="city">City:</label><input type="text" id="city" name="city" required></p>
+        <p><label for="state">State:</label><input type="text" id="state" name="state" required></p>
+        <p><label for="zip">Zip:</label><input type="text" id="zip" name="zip" required></p>
+        <p><label for="telephoneNumber">Telephone Number:</label><input type="tel" id="telephoneNumber" name="telephoneNumber" required></p>
+        <p><label for="email">E-mail:</label><input type="email" id="email" name="email" required></p>
+        <p><label for="dateOfSurvey">Date of Survey:</label><input type="date" id="dateOfSurvey" name="dateOfSurvey" required></p>
+        
+        <!-- Checkboxes -->
+        <fieldset>
+            <legend>What did you like most about the campus?</legend>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="likes[]" value="students"> Students</label>
+                <label><input type="checkbox" name="likes[]" value="location"> Location</label>
+                <label><input type="checkbox" name="likes[]" value="campus"> Campus</label>
+                <label><input type="checkbox" name="likes[]" value="atmosphere"> Atmosphere</label>
+                <label><input type="checkbox" name="likes[]" value="dormRooms"> Dorm Rooms</label>
+                <label><input type="checkbox" name="likes[]" value="sports"> Sports</label>
+            </div>
+        </fieldset>
+        
+        <!-- Radio Buttons -->
+        <fieldset>
+            <legend>How did you become interested in the university?</legend>
+            <div class="radio-group">
+                <label><input type="radio" name="interestSource" value="friends" required> Friends</label>
+                <label><input type="radio" name="interestSource" value="television"> Television</label>
+                <label><input type="radio" name="interestSource" value="internet"> Internet</label>
+                <label><input type="radio" name="interestSource" value="other"> Other</label>
+            </div>
+        </fieldset>
+        
+        <!-- Dropdown List -->
+        <p>
+            <label for="recommendation">Would you recommend this school to other prospective students?</label>
+            <select id="recommendation" name="recommendation" required>
+                <option value="veryLikely">Very Likely</option>
+                <option value="likely">Likely</option>
+                <option value="unlikely">Unlikely</option>
+            </select>
+        </p>
+        
+        <!-- Raffle Text Box -->
+        <p>
+            <label for="raffle">Enter at least ten comma separated numbers (1-100) for the Raffle:</label>
+            <input type="text" id="raffle" name="raffle" required placeholder="e.g., 1, 2, 3, ..., 10">
+        </p>
+        
+        <!-- Text Area for Additional Comments -->
+        <p>
+            <label for="additionalComments">Additional Comments:</label>
+            <textarea id="additionalComments" name="additionalComments" rows="4"></textarea>
+        </p>
+        
+        <!-- Submit and Cancel Buttons -->
+        <p>
+            <input type="submit" class="button" value="Submit">
+            <input type="reset" class="button" value="Cancel">
+        </p>
+    </form>
+</body>
+</html>
